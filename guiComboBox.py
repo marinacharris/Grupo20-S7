@@ -9,12 +9,12 @@ class Aplicacion:
         self.combo1 = ttk.Combobox(self.ventana1, width=20, textvariable=self.opcion,values= opciones)
         self.combo1.current(0)
         self.combo1.grid(row=0, column=0)
-        self.lblMostrar = ttk.Label(self.ventana1, text=self.opcion.get())
+        self.lblMostrar = ttk.Label(self.ventana1, text='')
         self.lblMostrar.grid(row=1, column=0)
         self.boton = ttk.Button(self.ventana1, text='Mostar',command=self.mostrar)
         self.boton.grid(row=2, column=0)
         self.ventana1.mainloop()
     def mostrar(self):
-        self.lblMostar['text']= self.opcion.get()
+        self.lblMostrar['text']= self.opcion.get()
 
 x = Aplicacion()
